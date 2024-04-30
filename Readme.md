@@ -1,7 +1,10 @@
  ### Book Management API
 
 [URL OF GITHUB](https://github.com/ankitofficial00/Book-Management-Application)
+
+
 This is a simple Node.js API for managing book entries, including user authentication, CRUD operations for books, filtering books by author or publication year, and basic security measures.
+
  ###### Getting Started
 
 To get started with this project, follow these steps:
@@ -14,12 +17,19 @@ To get started with this project, follow these steps:
 
 
  ##### Package Documentation
+
 Express: Fast, unopinionated, minimalist web framework for Node.js.
+
 Mongoose: MongoDB object modeling tool designed to work in an asynchronous environment.
+
 Body-parser: Parse incoming request bodies in a middleware before your handlers.
+
 Bcrypt: Library for hashing passwords.
-    Jsonwebtoken: JSON Web Token implementation for authentication.
+
+Jsonwebtoken: JSON Web Token implementation for authentication.
+
 Dotenv: Loads environment variables from a .env file into process.env.
+
 
 
 3. ###### Set up environment variables:
@@ -37,24 +47,42 @@ Dotenv: Loads environment variables from a .env file into process.env.
 ######  FOLDER STRUCTURE --MVC(MODAL VIEW CONTROLLER )
 
 ![alt text](./public/images/image-0.png)
+
+
+
   public
   images : to store the static files like images 
-   src
- models/: Contains Mongoose models for User and Book schemas.
-    routes/: Contains route handlers for authentication and book management endpoints.
-    middlewareS/: Contains custom middleware functions (e.g., authentication).
-    index.js: Entry point of the application where Express server is initialized.
-    .env: Environment variables file for storing sensitive information like database connection string and JWT secret key.
-    package.json: File containing project metadata and dependencies.
-    README.md: Project documentation file containing instructions on setting up and using the API.
-    db: this is used to connect the our server with the database
-    utils: it contain the utility code
-    constants.js : it contains the db name and constants
-    app.js : it contains the how to handle data come from frontend, format of data and also help to encoded the url .
 
+   src
+ models/: Contains Mongoose models for User and Book schema  
+
+
+ routes/: Contains route handlers for authentication and book management endpoints.
+
+middlewareS/: Contains custom middleware functions (e.g., authentication).
+
+index.js: Entry point of the application where Express server is initialized.
+
+.env: Environment variables file for storing sensitive information like database connection string and JWT secret key.
+
+package.json: File containing project metadata and dependencies.
+
+README.md: Project documentation file containing instructions on setting up and using the API.
+
+db: this is used to connect the our server with the database.
+utils: it contain the utility code.
+
+constants.js : it contains the db name and constants.
+app.js : it contains the how to handle data come from frontend, format of data and also help to encoded the url .
+
+
+##### Routes:
+/api/v1/users   ---  user route
+/api/v1/books    ---  books route
 
 
    ###### User Authentication
+
 User authentication is implemented using JWT (JSON Web Tokens). When a user registers or logs in, a JWT token is generated and returned. This token needs to be included in the header of subsequent requests to access protected endpoints. The token is validated using middleware (middlewares/authenticateToken.js) before processing the request.
 
 
