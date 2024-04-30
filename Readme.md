@@ -36,7 +36,7 @@ Dotenv: Loads environment variables from a .env file into process.env.
 
 ######  FOLDER STRUCTURE --MVC(MODAL VIEW CONTROLLER )
 
-![alt text](image.png)
+![alt text](./public/images/image-0.png)
   public
   images : to store the static files like images 
    src
@@ -66,13 +66,13 @@ User authentication is implemented using JWT (JSON Web Tokens). When a user regi
     Method: POST
     Description: Register a new user with email and password and userName and fullName
     Request Body:
-![alt text](image-1.png)
+![alt text](./public/images/image-1.png)
 
 Response:
     200 OK: User registered successfully.
     400 Bad Request: Invalid request body or email already exists.
   
-  ![alt text](image-2.png)
+  ![alt text](./public/images/image-2.png)
 
 2. ###### Login User
 
@@ -80,13 +80,13 @@ Response:
     Method: POST
     Description: Log in an existing user.
     Request Body:
-![alt text](image-3.png)
+![alt text](./public/images/image-3.png)
 
 Response:
 200 OK: Login successful, returns JWT token.
     401 Unauthorized: Invalid credentials.
 
-![alt text](image-4.png)
+![alt text](./public/images/image-4.png)
 
 
 3. ###### logout User
@@ -99,7 +99,7 @@ Response:
  200 OK: Login successful, returns JWT token.
     401 Unauthorized: Invalid credentials.
 
-![alt text](image.png)
+![alt text](./public/images/image-5.png)
 
 
 
@@ -111,7 +111,7 @@ Response:
     Description: Create a new book entry.
     Request Body:
 
-![alt text](image-1.png)
+![alt text](./public/images/image-6.png)
 
 
 Headers:
@@ -121,7 +121,7 @@ Response:
 200 OK: Book created successfully.
 401 Unauthorized: Authentication token missing or invalid.
 
-![alt text](image-2.png)
+![alt text](./public/images/image-7.png)
 
 
 2. ##### Get All Books
@@ -134,7 +134,7 @@ Response:
 200 OK: Returns an array of book objects.
 401 Unauthorized: Authentication token missing or invalid.
 
-![alt text](image-3.png)
+![alt text](./public/images/image-8.png)
 
 
 3. ##### Get Books by Author
@@ -146,7 +146,7 @@ Response:
 200 OK: Returns an array of book objects.
 401 Unauthorized: Authentication token missing or invalid.
 
-![alt text](image-4.png)
+![alt text](./public/images/image-9.png)
 
 4. ##### Get Books by Publication Year
 
@@ -157,7 +157,7 @@ Response:
 200 OK: Returns an array of book objects.
     401 Unauthorized: Authentication token missing or invalid.
 
-![alt text](image-5.png)
+![alt text](./public/images/image-10.png)
 
 5. ##### Update Book
 
@@ -166,7 +166,7 @@ Response:
     Description: Update a book entry by ID.
     Request Body:
 
-![alt text](image-6.png)
+![alt text](./public/images/image-11.png)
 
 Headers:
 auth-token: JWT token obtained after login.
@@ -175,7 +175,7 @@ Response:
     401 Unauthorized: Authentication token missing or invalid.
     404 Not Found: Book with given ID not found.
 
-![alt text](image-7.png)
+![alt text](./public/images/image-12.png)
 
 6. ##### Delete Book
 
@@ -189,7 +189,7 @@ Response:
         401 Unauthorized: Authentication token missing or invalid.
         404 Not Found: Book with given ID not found.
 
-![alt text](image-8.png)
+![alt text](./public/images/image-13.png)
 
  ##### Testing with Postman:
 Importing the Collection:
