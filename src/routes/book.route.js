@@ -6,6 +6,7 @@ import {
   updateBook,
 } from "../controllers/book.controllers.js";
 
+import authenticateToken from "../middlewares/authenticateToken.js";
 import express from "express";
 
 const router = express.Router();
@@ -13,8 +14,8 @@ const router = express.Router();
 // book route
 
 router.post("/add", addBook);
-router.get("/readAll", readAllBook);
-router.get("/filter", filterBook);
-router.put("/update/:id", updateBook);
-router.get("/delete/:id", deleteBook);
+router.get("/readAll", authenticateToken, readAllBook);
+router.get("/filter", authenticateToken, filterBook);
+router.put("/update/:id", authenticateToken, updateBook);
+router.get("/delete/:id", authenticateToken, deleteBook);
 export default router;

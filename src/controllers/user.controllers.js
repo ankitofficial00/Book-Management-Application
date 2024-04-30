@@ -99,7 +99,7 @@ const loginUser = async (req, res) => {
       secure: true,
     };
 
-    // clear cookie data where token is stored
+    
     return res.status(202).cookie("accessToken", token, options).json({
       success: true,
       message: "login successfully",
@@ -118,7 +118,7 @@ const logoutUser = async (req, res) => {
       httpOnly: true,
       secure: true,
     };
-
+  // clear cookies 
     return res
       .status(200)
       .clearCookie("accessToken", options)
